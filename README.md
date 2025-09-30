@@ -8,16 +8,16 @@ Aplikasi counter menggunakan **Jetpack Compose** dengan dua tombol: Tambah (+) d
 ### MainActivity.kt
 
 #### Implementasi State Management
+##### **1. State Declaration**
 ```kotlin
-//State Declaration
 var count by remember { mutableStateOf(0) }
 ```
 1. mutableStateOf(0): Membuat state yang dapat berubah dengan nilai awal 0
 2. remember: Menyimpan state dan mencegah reset saat recomposition
 3. by: Memungkinkan akses langsung ke nilai tanpa .value
 
+##### **2. State Update Pattern**
 ```kotlin
-//State Update Pattern
 Row(
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
